@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>File Compressor</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include browser-image-compression CDN -->
+  <script src="https://unpkg.com/browser-image-compression/dist/browser-image-compression.js"></script>
+  <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 </head>
 <body>
-    <input type="file" id="fileInput" multiple />
-    <select id="compressionLevel">
-    <option value="low">Low</option>
-    <option value="medium" selected>Medium</option>
-    <option value="high">High</option>
-    </select>
-    <button id="compressBtn">Compress</button>
-    <div id="output"></div>
-    <script src="popup.js"></script>
+  <div class="container">
+    <h2>File Compressor</h2>
+
+    <!-- File Upload -->
+    <div id="uploadArea" class="upload-area">
+      <p>Drag & drop files here or click to select</p>
+      <input type="file" id="fileInput" multiple />
+    </div>
+
+    <!-- Compression Level -->
+    <div class="settings">
+      <label for="compressionLevel">Compression Level:</label>
+      <select id="compressionLevel">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <!-- Compress Button -->
+    <button id="compressBtn" class="compress-btn">Compress</button>
+
+    <!-- Output Area -->
+    <div id="output" class="output"></div>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>
